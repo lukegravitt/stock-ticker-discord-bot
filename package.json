@@ -1,0 +1,17 @@
+{
+  "name": "stock-ticker-discord-bot",
+  "version": "1.0.0",
+  "description": "A little discord bot that can report stock ticker prices using a finance api",
+  "main": "index.js",
+  "repository": "https://github.com/lukegravitt/stock-ticker-discord-bot.git",
+  "author": "lukegravitt",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "yahoo-finance": "^0.3.6"
+  }
+}
