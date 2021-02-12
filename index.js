@@ -7,6 +7,12 @@ const TOKEN = process.env.TOKEN;
 bot.login(TOKEN);
 
 bot.on('ready', () => {
+  bot.user.setPresence({
+    activity: {
+      name: `for '!price SMYB'`,
+      type: 'WATCHING',
+    },
+  });
   console.info(`Logged in as ${bot.user.tag}!`);
 });
 
