@@ -22,8 +22,11 @@ bot.on('message', async (msg) => {
     try {
       const result = await yahooFinance.quote(args, ['price']);
       console.log(result);
-      if (result.price) {
+      if (result.price && result.price.shortName) {
         msg.channel.send(`Current price for ${result.price.shortName} (${result.price.symbol}): ${result.price.currencySymbol}${result.price.regularMarketPrice}`);
+      }
+      else {
+        msg.channel.send(`Error retrieving price for ${args}`);
       }
     }
     catch {
